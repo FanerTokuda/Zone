@@ -24,7 +24,6 @@ public class Mob {
     public long timeFight;
     public MobTemplate template;
     public Player pTarget;
-    public long time = 6000;// Thời gian reset quái
     //BIGBOSS HIRUREGARN
     public long delayBoss = 0;
     public byte typeHiru = 0;
@@ -40,7 +39,6 @@ public class Mob {
         this.xpup = 10000L;
         this.isDie = false;
         this.timeFight = -1L;
-        
         
     }
     public static MobTemplate getMob(int id) {
@@ -60,7 +58,7 @@ public class Mob {
             //reset char target
             pTarget = null;
             if (isRefresh) {
-                timeRefresh = System.currentTimeMillis()+ time;
+                timeRefresh = System.currentTimeMillis()+ 3000;
             }
         }
     }
